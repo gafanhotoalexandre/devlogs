@@ -6,7 +6,7 @@ import './globals.css'
 
 import { Navbar } from '@/components/Navbar'
 
-const firaCode = Fira_Code({ weight: '400', subsets: ['latin'] })
+const firaCode = Fira_Code({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'DevLogs',
