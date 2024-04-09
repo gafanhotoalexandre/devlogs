@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter, Fira_Code } from 'next/font/google'
-import { ThemeProvider } from 'next-themes'
+import { Fira_Code } from 'next/font/google'
 
-import './globals.css'
+import '../globals.css'
 
-import { Navbar } from '@/components/Navbar'
+import { Navbar } from '@/components/shared/Navbar'
+import { Provider } from '@/utils/Provider'
 
 const firaCode = Fira_Code({ subsets: ['latin'] })
 
@@ -24,11 +24,11 @@ export default function RootLayout({
       <body
         className={`${firaCode.className} h-full bg-amber-50 text-indigo-950 dark:bg-slate-950 dark:text-amber-50 dark:selection:bg-purple-500`}
       >
-        <ThemeProvider attribute="class">
+        <Provider>
           <Navbar />
 
           <main className="mx-auto max-w-5xl px-6">{children}</main>
-        </ThemeProvider>
+        </Provider>
       </body>
     </html>
   )
