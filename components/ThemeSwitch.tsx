@@ -15,7 +15,10 @@ export function ThemeSwitch() {
   if (!mounted) return null
 
   return (
-    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+    <button
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      className="border border-purple-700 rounded-full p-1 hover:bg-purple-700 hover:bg-opacity-10 dark:hover:bg-amber-50 dark:hover:bg-opacity-10 transition"
+    >
       {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
     </button>
   )
